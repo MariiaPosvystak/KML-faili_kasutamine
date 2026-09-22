@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f5;
+    color: #333;
+}
+
+/* Верхняя часть страницы */
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+    color: #dce3e8;
+}
+
+
+/* Основной блок */
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+/* Обычные блоки */
+
+.intro,
+.conclusion,
+.comparison {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.intro h2,
+.conclusion h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+
+/* Кнопки на главной и странице сравнения */
+
+.menu {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Карточки LeafletJS и OpenLayers */
+
+.comparison {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.card h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.card h3 {
+    color: #555;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+
+/* Нижняя часть страницы */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+
+/* Адаптация для телефона */
+
+@media (max-width: 700px) {
+
+    .comparison {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .button {
+        text-align: center;
+    }
+}
