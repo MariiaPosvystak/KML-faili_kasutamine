@@ -1,57 +1,48 @@
 <!DOCTYPE html>
 <html lang="et">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaardiprojekt</title>
+    <title>Kaardiprojekt – LeafletJS ja OpenLayers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-    <h1>Interaktiivsete kaartide projekt</h1>
-    <p>LeafletJS ja OpenLayers</p>
+<header class="topbar">
+    <a class="brand" href="index.html">Kaardiprojekt</a>
+    <nav class="nav" aria-label="Peamenüü">
+        <a href="index.html" aria-current="page">Avaleht</a>
+        <a href="leafletJS.html">LeafletJS</a>
+        <a href="OpenLayers.html">OpenLayers</a>
+        <a href="võrdlus.html">Võrdlus</a>
+    </nav>
 </header>
-
-<main>
-
-    <section class="intro">
-        <h2>Tere tulemast!</h2>
-
-        <p>
-            See veebiprojekt näitab sama KML-faili kasutamist
-            kahes erinevas JavaScripti kaarditeegis.
-        </p>
-
-        <p>
-            Projekti kasutatakse LeafletJS ja OpenLayers
-            kaarditeekide võrdlemiseks.
-        </p>
+<main class="wrap">
+    <section class="hero">
+        <div>
+            <h1>Üks teekond, kaks kaarditeeki</h1>
+            <p>Sama KML-fail kuvatakse kahes JavaScripti teegis: LeafletJS ja OpenLayers. Kaartidel on kool, kodu, teekond koolist koju ja kodukohta tähistav ala.</p>
+            <p>Võrdle, kui erinevalt sama ülesande kaks teeki lahendavad.</p>
+        </div>
     </section>
 
-    <section class="menu">
-
-        <a href="leafletJS.html" class="button">
-            LeafletJS kaart
+    <section class="choices" aria-label="Lehed">
+        <a class="choice" href="leafletJS.html">
+            <h2>LeafletJS</h2>
+            <p>Kerge teek, KML laetakse pluginaga.</p>
         </a>
-
-        <a href="OpenLayers.html" class="button">
-            OpenLayers kaart
+        <a class="choice" href="OpenLayers.html">
+            <h2>OpenLayers</h2>
+            <p>Mahukas teek, KML-tugi on sisse ehitatud.</p>
         </a>
-
-        <a href="võrdlus.html" class="button">
-            Kaarditeekide võrdlus
+        <a class="choice" href="võrdlus.html">
+            <h2>Võrdlus</h2>
+            <p>Praktilise töö põhjal tehtud kokkuvõte.</p>
         </a>
-
     </section>
-
 </main>
-
-<footer>
-    <p>Kaardiprojekt</p>
-</footer>
-
+<footer>&copy; Mariia Posvystak - 2026</footer>
 </body>
 </html>

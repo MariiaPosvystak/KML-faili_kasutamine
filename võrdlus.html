@@ -4,128 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaarditeekide võrdlus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-    <h1>Kaarditeekide võrdlus</h1>
-    <p>LeafletJS ja OpenLayers</p>
+<header class="topbar">
+    <a class="brand" href="index.html">Kaardiprojekt</a>
+    <nav class="nav" aria-label="Peamenüü">
+        <a href="index.html">Avaleht</a>
+        <a href="leafletJS.html">LeafletJS</a>
+        <a href="OpenLayers.html">OpenLayers</a>
+        <a href="võrdlus.html" aria-current="page">Võrdlus</a>
+    </nav>
 </header>
+<main class="wrap">
+    <h1 class="page-title">Kaarditeekide võrdlus</h1>
+    <p class="page-lead">Mõlemad kaardid kasutavad sama KML-faili: kooli, kodu, teekonda ja kodukohta tähistavat ala.</p>
 
-<main>
-
-    <section class="intro">
-        <h2>KML-faili kasutamine</h2>
-
-        <p>
-            Selles projektis kasutatakse kahte kaarditeeki:
-            LeafletJS ja OpenLayers. Mõlemad kaardid kasutavad
-            sama KML-faili.
-        </p>
-    </section>
-
-
-    <section class="comparison">
-
-        <div class="card">
-
+    <div class="split">
+        <section class="card leaflet">
             <h2>LeafletJS</h2>
-
-            <p>
-                LeafletJS on lihtne ja kerge JavaScripti teek
-                interaktiivsete kaartide loomiseks.
-            </p>
-
+            <p>Lihtne ja kerge JavaScripti teek interaktiivsete kaartide loomiseks.</p>
             <h3>Eelised</h3>
-
             <ul>
                 <li>Lihtne süntaks</li>
-                <li>Lihtne õppida ja kasutada</li>
-                <li>Markerite lisamine on mugav</li>
+                <li>Kiire õppida ja kasutada</li>
+                <li>Markerite ja hüpikakende lisamine on mugav</li>
                 <li>Sobib väiksematele projektidele</li>
             </ul>
-
             <h3>Puudused</h3>
-
             <ul>
                 <li>Vähem sisseehitatud võimalusi</li>
-                <li>Mõne funktsiooni jaoks on vaja lisapluginaid</li>
+                <li>KML-i jaoks on vaja lisaplugin (leaflet-omnivore)</li>
             </ul>
+            <p><a class="btn" href="leafletJS.html">Ava LeafletJS kaart</a></p>
+        </section>
 
-            <a href="leafletJS.html" class="button">
-                Ava LeafletJS kaart
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
+        <section class="card openlayers">
             <h2>OpenLayers</h2>
-
-            <p>
-                OpenLayers on funktsionaalsem JavaScripti teek,
-                mida saab kasutada kaartide ja geograafiliste
-                andmetega töötamiseks.
-            </p>
-
+            <p>Funktsionaalsem teek kaartide ja geograafiliste andmetega töötamiseks.</p>
             <h3>Eelised</h3>
-
             <ul>
                 <li>Palju sisseehitatud võimalusi</li>
-                <li>Hea geograafiliste andmete tugi</li>
-                <li>Toetab KML-formaati</li>
+                <li>KML-formaadi tugi on teegis olemas</li>
+                <li>Hea geograafiliste andmete ja projektsioonide tugi</li>
                 <li>Sobib keerukamate kaartide jaoks</li>
             </ul>
-
             <h3>Puudused</h3>
-
             <ul>
-                <li>Süntaks on keerulisem</li>
-                <li>Võtab rohkem aega õppimiseks</li>
+                <li>Keerulisem süntaks</li>
+                <li>Õppimiseks kulub rohkem aega</li>
             </ul>
+            <p><a class="btn" href="OpenLayers.html">Ava OpenLayers kaart</a></p>
+        </section>
+    </div>
 
-            <a href="OpenLayers.html" class="button">
-                Ava OpenLayers kaart
-            </a>
+    <div class="table-scroll">
+        <table>
+            <thead>
+            <tr><th></th><th>LeafletJS</th><th>OpenLayers</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>KML-i laadimine</td><td>Plugin leaflet-omnivore</td><td>Sisseehitatud ol.format.KML</td></tr>
+            <tr><td>Objektide stiil</td><td>Igale kihile eraldi setStyle</td><td>Üks stiilifunktsioon kogu kihile</td></tr>
+            <tr><td>Hüpikaken</td><td>bindPopup ühe reaga</td><td>Overlay koos oma HTML-iga</td></tr>
+            <tr><td>Mõõtkava</td><td>L.control.scale</td><td>ol.control.ScaleLine</td></tr>
+            <tr><td>Lisafunktsioon</td><td>Aluskaartide vahetus (L.control.layers)</td><td>Täisekraani nupp (ol.control.FullScreen)</td></tr>
+            <tr><td>Koodi maht</td><td>Lühem</td><td>Pikem</td></tr>
+            </tbody>
+        </table>
+    </div>
 
-        </div>
-
-    </section>
-
-
-    <section class="conclusion">
-
+    <div class="prose">
         <h2>Praktiline võrdlus</h2>
-
-        <p>
-            LeafletJS-iga oli lihtsa interaktiivse kaardi loomine
-            arusaadavam ja kiirem.
-        </p>
-
-        <p>
-            OpenLayers pakub rohkem võimalusi erinevate geograafiliste
-            andmete ja KML-failidega töötamiseks, kuid selle seadistamine
-            on veidi keerulisem.
-        </p>
-
-        <p>
-            Selles projektis kasutatakse mõlema teegi puhul sama KML-faili,
-            mistõttu saab nende kasutamist praktiliselt võrrelda.
-        </p>
-
-    </section>
-
+        <p>LeafletJS-iga oli lihtsa interaktiivse kaardi loomine arusaadavam ja kiirem. Hüpikakna ja aluskaartide vahetuse sai valmis funktsioonidega.</p>
+        <p>OpenLayers nõudis rohkem seadistamist, kuid KML-i lugemine oli teegi sisse ehitatud ning mõõtkava ja täisekraani nupu sai lisada valmis kontrollidega.</p>
+        <h2>Millal kumba kasutada?</h2>
+        <p>LeafletJS sobib, kui vaja on kiiresti valmis lihtne ja kerge kaart, näiteks asukoha näitamiseks veebilehel. OpenLayers sobib, kui kaardil on palju geograafilisi andmeid, erinevaid projektsioone või keerukam stiil ja interaktsioon.</p>
+    </div>
 </main>
-
-
-<footer>
-    <p>
-        Praktiline töö – kaarditeekide võrdlus
-    </p>
-</footer>
-
+<footer>&copy; Mariia Posvystak - 2026</footer>
 </body>
 </html>

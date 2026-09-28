@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeafletJS</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <style>#map { height: 600px; }</style>
+    <title>LeafletJS kaart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="map"></div>
+<header class="topbar">
+    <a class="brand" href="index.html">Kaardiprojekt</a>
+    <nav class="nav" aria-label="Peamenüü">
+        <a href="index.html">Avaleht</a>
+        <a href="leafletJS.html" aria-current="page">LeafletJS</a>
+        <a href="OpenLayers.html">OpenLayers</a>
+        <a href="võrdlus.html">Võrdlus</a>
+    </nav>
+</header>
+<main class="wrap">
+    <h1 class="page-title">LeafletJS kaart</h1>
+    <p class="page-lead">Teekond koolist koju, laetud KML-failist. Klõpsa objektil, et näha selle nime.</p>
 
+    <div class="workspace">
+        <div id="map"></div>
+
+        <aside class="panel">
+            <section>
+                <h2>Tähised</h2>
+                <ul class="legend">
+                    <li><span class="sw marker"></span>Kool ja kodu</li>
+                    <li><span class="sw bus"></span>Ühistransport</li>
+                    <li><span class="sw walk"></span>Jalgsi</li>
+                    <li><span class="sw zone"></span>Kodukoht</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Funktsioonid</h2>
+                <p class="hint">Aluskaardi saab vahetada kaardi paremas ülanurgas. Vasakul all on mõõtkava.</p>
+            </section>
+        </aside>
+    </div>
+</main>
+<footer>&copy; Mariia Posvystak - 2026</footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/@mapbox/leaflet-omnivore@0.3.4/leaflet-omnivore.js"></script>
 <script src="leafletJS.js"></script>
