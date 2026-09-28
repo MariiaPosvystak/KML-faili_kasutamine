@@ -13,7 +13,6 @@ Cesium.TileMapServiceImageryProvider.fromUrl(
     viewer.imageryLayers.addImageryProvider(imageryProvider);
 });
 
-// CARTO tänavakaart selle peale - tasuta, tokenit pole vaja, toetab CORS-i.
 viewer.imageryLayers.addImageryProvider(
     new Cesium.UrlTemplateImageryProvider({
         url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
