@@ -7,8 +7,6 @@ const viewer = new Cesium.Viewer('map', {
     terrainProvider: new Cesium.EllipsoidTerrainProvider()
 });
 
-// Cesiumi enda kaasasolev pinnakate - laetakse samast CDN-paketist (mitte
-// välisest serverist), seega töötab alati ega vaja ion-tokenit.
 Cesium.TileMapServiceImageryProvider.fromUrl(
     Cesium.buildModuleUrl('Assets/Textures/NaturalEarthII')
 ).then(function (imageryProvider) {
