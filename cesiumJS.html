@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CesiumJS kaart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cesium@1.111/Build/Cesium/Widgets/widgets.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">Kaardiprojekt</a>
+    <nav class="nav" aria-label="Peamenüü">
+        <a href="index.html">Avaleht</a>
+        <a href="leafletJS.html">LeafletJS</a>
+        <a href="OpenLayers.html">OpenLayers</a>
+        <a href="cesiumJS.html" aria-current="page">CesiumJS</a>
+        <a href="võrdlus.html">Võrdlus</a>
+    </nav>
+</header>
+<main class="wrap">
+    <h1 class="page-title">CesiumJS 3D vaade</h1>
+    <p class="page-lead">Kolmas lahendus: sama KML-fail kuvatuna 3D gloobusel. Klõpsa objektil, et näha selle nime ja kirjeldust.</p>
+
+    <div class="workspace">
+        <div id="map"></div>
+
+        <aside class="panel">
+            <section>
+                <h2>Tähised</h2>
+                <ul class="legend">
+                    <li><span class="sw marker"></span>Kool ja kodu</li>
+                    <li><span class="sw bus"></span>Ühistransport</li>
+                    <li><span class="sw walk"></span>Jalgsi</li>
+                    <li><span class="sw zone"></span>Kodukoht</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Funktsioonid</h2>
+                <p class="hint">Gloobust saab pöörata ja kallutada hiirega. Objektil klõpsates avaneb Cesiumi enda infopaneel koos nimega.</p>
+            </section>
+        </aside>
+    </div>
+</main>
+<footer>&copy; Mariia Posvystak - 2026</footer>
+<script src="https://cdn.jsdelivr.net/npm/cesium@1.111/Build/Cesium/Cesium.js"></script>
+<script src="cesiumJS.js"></script>
+</body>
+</html>
