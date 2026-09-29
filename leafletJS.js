@@ -9,7 +9,6 @@ const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/servi
     maxZoom: 19,
     attribution: 'Tiles &copy; Esri'
 });
-
 osm.addTo(map);
 
 L.control.layers({ 'Kaart': osm, 'Satelliit': satellite }).addTo(map);
