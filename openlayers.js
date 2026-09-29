@@ -1,6 +1,5 @@
 const BLUE = '#1976d2';
 const AMBER = '#f9a825';
-
 const styles = {
     point: new ol.style.Style({
         image: new ol.style.Circle({
